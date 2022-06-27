@@ -5,7 +5,7 @@
 
   tasks:
   - name: install packages
-   apt:
+    apt:
       pkg:
         - htop
         - tmux
