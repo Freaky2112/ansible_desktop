@@ -3,11 +3,12 @@
   connection: local
   tags: always
   become: true
-  pre_task:
-    -name: update repo
-     tags: always
-     apt: update_cache=yes
-     change_when: False
+
+#  pre_task:
+#    -name: update repo
+#     tags: always
+#     apt: update_cache=yes
+#     change_when: False
 
   tasks:
   - name: install htop
