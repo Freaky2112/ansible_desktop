@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  pre_tasks:
+    - name: udpate repo
+      apt: 
+        update_cache: yes
+      change_when: Fasle
+
+  tasks:
+    - include: tasks/packages.yml
+    - include: tasks/copy.yml
+    - include: tasks/wallpaper.yml
+
