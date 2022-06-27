@@ -6,7 +6,7 @@
       - tmux
       - curl
       - wget
-      - pip
+      - python3-psutil
       - net-tools
     state: latest
 
