@@ -1,23 +1,15 @@
---- 
-- 
-  hosts: localhost
+---
+- hosts: localhost
   connection: local
   become: true
-  pre_task: 
-    - 
-      name: "update repo"
-      package: 
-        update_cache: true
 
-  tasks: 
-    - 
-      name: "install Packages"
-      package: 
-        name: 
-          - htop
-          - tmux
-          - net-tools
-          - git
-          - curl
-          - wget
-        
+  tasks:
+  - name: install packages
+    package:
+      name:
+        - htop
+        - tmux
+        - curl
+        - wget
+        - net-tools
+
