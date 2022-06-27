@@ -13,12 +13,12 @@
         - wget
         - net-tools
 
-- name: copy wallpaper file
-    copy:
-      src: Wallpaper/Angela Gossow.jpg 
-      dest: /usr/share/backgrounds/ansible-wallpaper.png
-      owner: root
-      group: root
+  - name: copy wallpaper file
+      copy:
+        src: Wallpaper/Angela Gossow.jpg 
+        dest: /usr/share/backgrounds/ansible-wallpaper.png
+        owner: root
+        group: root
 
   - name: set wallpaper
     become_user: jay
