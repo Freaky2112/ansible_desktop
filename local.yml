@@ -13,6 +13,7 @@
         - wget
         - pip
         - net-tools
+   state: latest
 
   - name: copy wallpaper file
     copy:
