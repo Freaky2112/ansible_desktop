@@ -33,12 +33,13 @@
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
 
-  - name: copy bashrc file and tmux conf
+  - name: copy bashrc file 
     copy:
       src: files/bashrc
       dest: $HOME/.bashrc
       owner: freaky
       group: freaky
+  - name: copy tmuc config file
     copy
       src: files/tmux.conf
       dest: files/.tmux.conf
