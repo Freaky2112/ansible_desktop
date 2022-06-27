@@ -6,10 +6,10 @@
 
   pre_task:
     - name: update repo
-     tags: always
-     package: 
-       update_cache: yes
-     change_when: False
+      tags: always
+      package: 
+        update_cache: yes
+      change_when: False
 
   tasks:
   - name: install Packages
