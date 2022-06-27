@@ -37,8 +37,6 @@
     copy:
       src: files/bashrc
       dest: $HOME/.bashrc
-      owner: freaky
-      group: freaky
       src: files/tmux.conf
       dest: files/.tmux.conf
       owner: freaky
