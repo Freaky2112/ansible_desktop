@@ -40,7 +40,7 @@
       owner: freaky
       group: freaky
   - name: copy tmuc config file
-    copy
+    copy:
       src: files/tmux.conf
       dest: /home/freaky/.tmux.conf
       owner: freaky
