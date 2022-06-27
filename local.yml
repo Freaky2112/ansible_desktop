@@ -1,6 +1,6 @@
 --- 
 - 
-  hosts: localhos
+  hosts: localhost
   connection: local
   become: true
   pre_task: 
