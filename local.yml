@@ -4,11 +4,11 @@
   become: true
 
   pre_tasks:
-    - name: udpate repo
-      apt: 
+    - name: update repositories
+      apt:
         update_cache: yes
-      change_when: Fasle
-
+      changed_when: False
+  
   tasks:
     - include: tasks/packages.yml
     - include: tasks/copy.yml
