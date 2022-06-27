@@ -1,0 +1,11 @@
+- name: Install packages
+  apt:
+    name:
+      - htop
+      - tmux
+      - curl
+      - wget
+      - pip
+      - net-tools
+    state: latest
+
