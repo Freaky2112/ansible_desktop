@@ -1,14 +1,14 @@
 --- 
 - 
-  become: true
+  hosts: localhos
   connection: local
-  hosts: localhost
+  become: true
   pre_task: 
     - 
-      change_when: false
       name: "update repo"
       package: 
         update_cache: true
+
   tasks: 
     - 
       name: "install Packages"
@@ -20,4 +20,4 @@
           - git
           - curl
           - wget
-        state: latest
+        
