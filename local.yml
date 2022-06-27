@@ -3,46 +3,14 @@
   connection: local
   become: true
 
+  pre_tasks:
+    - name: udpate repo
+      apt: 
+        update_cache: yes
+      change_when: Fasle
+
   tasks:
-  - name: install packages
-    apt:
-      pkg:
-        - htop
-        - tmux
-        - curl
-        - wget
-        - pip
-        - net-tools
-      state: latest
+    - include: tasks/packages.yml
+    - include: tasks/copy.yml
+    - include: tasks/wallpaper.yml
 
-  - name: copy wallpaper file
-    copy:
-      src: Wallpaper/Angela Gossow.jpg 
-      dest: /usr/share/backgrounds/ansible-wallpaper.jpg
-      owner: root
-      group: root
-
-  - name: set wallpaper
-    become_user: freaky
-    dconf:
-      key: "/org/gnome/desktop/background/picture-uri"
-      value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
-
-  - name: set wallpaper position
-    become_user: freaky
-    dconf:
-      key: "/org/gnome/desktop/background/picture-options"
-      value: "'zoom'"
-
-  - name: copy bashrc file 
-    copy:
-      src: files/bashrc
-      dest: /home/freaky/.bashrc
-      owner: freaky
-      group: freaky
-  - name: copy tmuc config file
-    copy:
-      src: files/tmux.conf
-      dest: /home/freaky/.tmux.conf
-      owner: freaky
-      group: freaky

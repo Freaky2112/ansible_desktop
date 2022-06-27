@@ -1,0 +1,48 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: install packages
+    apt:
+      pkg:
+        - htop
+        - tmux
+        - curl
+        - wget
+        - pip
+        - net-tools
+      state: latest
+
+  - name: copy wallpaper file
+    copy:
+      src: Wallpaper/Angela Gossow.jpg 
+      dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+      owner: root
+      group: root
+
+  - name: set wallpaper
+    become_user: freaky
+    dconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
+
+  - name: set wallpaper position
+    become_user: freaky
+    dconf:
+      key: "/org/gnome/desktop/background/picture-options"
+      value: "'zoom'"
+
+  - name: copy bashrc file 
+    copy:
+      src: files/bashrc
+      dest: /home/freaky/.bashrc
+      owner: freaky
+      group: freaky
+  - name: copy tmuc config file
+    copy:
+      src: files/tmux.conf
+      dest: /home/freaky/.tmux.conf
+      owner: freaky
+      group: freaky
