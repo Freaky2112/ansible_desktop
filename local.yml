@@ -36,7 +36,7 @@
   - name: copy bashrc file 
     copy:
       src: files/bashrc
-      dest: home/freaky/.bashrc
+      dest: /home/freaky/.bashrc
       owner: freaky
       group: freaky
 #  - name: copy tmuc config file
