@@ -5,8 +5,8 @@
 
   tasks:
   - name: install packages
-    package:
-      name:
+   apt:
+      pkg:
         - htop
         - tmux
         - curl
