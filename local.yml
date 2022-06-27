@@ -1,12 +1,10 @@
 ---
 - hosts: localhost
   connection: local
-  tags: always
   become: true
 
   pre_task:
     - name: update repo
-      tags: always
       package: 
         update_cache: yes
       change_when: False
