@@ -11,6 +11,7 @@
         - tmux
         - curl
         - wget
+        - pip
         - net-tools
 
   - name: copy wallpaper file
@@ -31,3 +32,13 @@
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
+
+  - name: copy bashrc file and tmux conf
+    src: files/bashrc
+    dest: $HOME/.bashrc
+    owner: freaky
+    group: freaky
+    src: files/tmux.conf
+    dest: files/.tmux.conf
+    owner: freaky
+    group: freaky
