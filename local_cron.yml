@@ -13,6 +13,4 @@
     - include: tasks/upgrade.yml
     - include: tasks/packages.yml
     - include: tasks/bash.yml
-    - include: tasks/tmux.yml
-    - include: tasks/wallpaper.yml
-    
+    - include: tasks/tmux.yml    
