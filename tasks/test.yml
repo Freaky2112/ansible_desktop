@@ -2,10 +2,8 @@
 - hosts: localhost
   connection: local
   become: true
-
-  - name: setup Vars for wallpapers
-    vars:
-      random_number: "{{ 3 | random }}"
+  vars:
+    random_number: "{{ 3 | random }}"
     
   - name: copy from vars
     copy:
