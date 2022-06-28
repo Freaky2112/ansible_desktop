@@ -1,6 +1,6 @@
 - name: Install packages
   become: true
-  apt:
+  package:
     name:
       - htop
       - tmux
