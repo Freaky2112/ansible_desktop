@@ -3,7 +3,7 @@
   vars:
     random_number: "{{ 3 | random }}"
 
-  name: copy from vars
+  name: copy from vars 1
   copy:
     src: metal-name.jpg
     dest: /usr/share/backgrounds/ansible-wallpaper.jpg
@@ -11,7 +11,7 @@
     group: root
     when: "{{random_number}} | match('1')"
 
-  name: copy from vars
+  name: copy from vars 2
   copy:
     src: Wallpaper/Angela Gossow.jpg
     dest: /usr/share/backgrounds/ansible-wallpaper.jpg
@@ -25,3 +25,16 @@
     dest: /usr/share/backgrounds/ansible-wallpaper.jpg
     owner: root
     group: root
+    when: "{{random_number}} | match('3')"
+
+- name: set wallpaper
+  become_user: freaky
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
+
+- name: set wallpaper position
+  become_user: freaky
+  dconf:
+    key: "/org/gnome/desktop/background/picture-options"
+    value: "'zoom'"
