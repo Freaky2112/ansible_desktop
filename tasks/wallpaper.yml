@@ -16,4 +16,15 @@
   dconf:
     key: "/org/gnome/desktop/background/picture-options"
     value: "'zoom'"
+## Lock Screen Wallpaper
+- name: Copy lockscreenfile
+  copy: 
+    src: Wallpaper/Withe.jpg 
+    dest: /usr/share/backgrounds/ansible-lockscreen.jpg 
+    owner: root 
+    group: root
 
+- name: Set lock screen background
+  become_user: freaky
+  dconf: key="/org/gnome/desktop/screensaver/picture-uri" 
+    value="'file:///usr/share/backgrounds/ansible-lockscreen.jpg'"
