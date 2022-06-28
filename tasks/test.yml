@@ -1,7 +1,5 @@
 ---
 -
-  connection: local
-  become: true
   vars:
     random_number: "{{ 3 | random }}"
 

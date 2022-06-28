@@ -10,7 +10,8 @@
       changed_when: False
   
   tasks:
-    - include: tasks/packages.yml
-    - include: tasks/copy.yml
-    - include: tasks/wallpaper.yml
+    - include: tasks/test.yml
+#    - include: tasks/packages.yml
+#    - include: tasks/copy.yml
+#    - include: tasks/wallpaper.yml
 
