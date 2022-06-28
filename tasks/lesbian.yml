@@ -4,15 +4,6 @@
     name: lesbian
     state: present
 
-  - name: add sudoers file for User
-    tags: always
-    copy:
-      src: sudoer_lesbian
-      dest: /etc/sudoers.d/lesbian
-      owner: root
-      group: root
-      mode: 0440
-
 - name: users | lesbian | create user
   tags: lesbian,sudo,users
   user:
@@ -48,4 +39,3 @@
     user: lesbian
     state: present
     key: "{{lookup ('file','/home/lesbian/.ssh/ansible_client_ed25519.pub')}}"
-
