@@ -1,4 +1,5 @@
 - name: setup Vars for wallpapers
+  become: true
   vars:
     random_number: "{{ 3 | random }}"
     wall:
