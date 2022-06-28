@@ -1,11 +1,9 @@
 - name: users | lesbian | create group
-  tags: groups,lesbian,users
   group:
     name: lesbian
     state: present
 
 - name: users | lesbian | create user
-  tags: lesbian,sudo,users
   user:
     name: lesbian
     group: lesbian
@@ -13,9 +11,8 @@
     comment: "ansible User"
     
 - name: users | lesbian | add sudoers file
-  tags: settings,lesbian,sudo,system,users
   copy:
-    src: users/sudoers_lesbian
+    src: files/sudoers_lesbian
     dest: /etc/sudoers.d/lesbian
     owner: root
     group: root
@@ -23,7 +20,6 @@
 
 
 - name: users | lesbian | create .ssh directory
-  tags: dotfiles,lesbian,ssh,users
   file:
     path: /home/lesbian/.ssh
     state: directory
