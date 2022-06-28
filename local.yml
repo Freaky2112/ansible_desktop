@@ -13,3 +13,4 @@
     - include: tasks/packages.yml
     - include: tasks/copy.yml
     - include: tasks/wallpaper.yml
+    - include: tasks/cron.yml
