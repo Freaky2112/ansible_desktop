@@ -9,12 +9,9 @@
   user:
     name: lesbian
     group: lesbian
-    groups: ansible,{{ sudo_group }}
     state: present
     comment: "ansible User"
-    password: "{{ lesbian_passwd }}"
-    shell: /bin/bash
-
+    
 - name: users | lesbian | add sudoers file
   tags: settings,lesbian,sudo,system,users
   copy:
@@ -36,13 +33,10 @@
   with_items:
     - { dir: '/home/lesbian/.ssh' }
 
-
-- name: users | lesbian | add public key
-  tags: dotfiles,lesbian,ssh,ssh-keys,users
+- name: add ssh key for User ansible
+  tags: always
   authorized_key:
     user: lesbian
-    key: "{{ item }}"
-  with_file:
-    - users/lesbian/ssh/ansible_ed25519.pub
-
+    state: present
+    key: "{{lookup ('file','/home/lesbian/.ssh/ansible_client_ed25519.pub')}}"
 
