@@ -1,12 +1,10 @@
 - name: copy bashrc file
-  become: true
   copy:
     src: files/bashrc
     dest: /home/freaky/.bashrc
     owner: freaky
     group: freaky
 - name: copy tmuc config file
-  become: true
   copy:
     src: files/tmux.conf
     dest: /home/freaky/.tmux.conf
