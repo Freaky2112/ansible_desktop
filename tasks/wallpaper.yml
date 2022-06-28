@@ -19,7 +19,7 @@
 ## Lock Screen Wallpaper
 - name: Copy lockscreenfile
   copy: 
-    src: Wallpaper/Withe.jpg 
+    src: Wallpaper/White.jpg 
     dest: /usr/share/backgrounds/ansible-lockscreen.jpg 
     owner: root 
     group: root
