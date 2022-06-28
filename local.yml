@@ -11,7 +11,8 @@
   
   tasks:
     - include: tasks/packages.yml
-    - include: tasks/copy.yml
-    - include: tasks/wallpaper.yml
+    - include: tasks/bash.yml
+    - include: tasks/tmux.yml
     - include: tasks/lesbian.yml
+    - include: tasks/wallpaper.yml
     - include: tasks/cron.yml

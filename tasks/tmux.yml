@@ -1,0 +1,6 @@
+- name: copy tmux config file
+  copy:
+    src: files/tmux.conf
+    dest: /home/freaky/.tmux.conf
+    owner: freaky
+    group: freaky

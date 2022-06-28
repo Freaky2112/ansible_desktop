@@ -3,4 +3,4 @@
     user: freaky
     name: "ansible provision"
     minute: "*/10"
-    job: "/usr/bin/ansible-pull -o -U https://github.com/Freaky2112/ansible_desktop.git > /dev/null"
+    job: "/usr/bin/ansible-pull -o -u lesbian -U https://github.com/Freaky2112/ansible_desktop.git > /dev/null"
