@@ -13,7 +13,7 @@
 - name: users | lesbian | add sudoers file
   become: true
   copy:
-    src: files/sudoers_lesbian
+    src: sudoers_lesbian
     dest: /etc/sudoers.d/lesbian
     owner: root
     group: root
