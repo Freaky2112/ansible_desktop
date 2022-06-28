@@ -1,0 +1,33 @@
+- name: setup Vars for wallpapers
+  vars:
+    random_number: "{{ 3 | random }}"
+    wall:
+      2: Wallpaper/Metal name.jpg
+      3: Wallpaper/Angela Gossow 2.jpg
+      4: Wallpaper/Angela Gossow.jpg
+      5: Wallpaper/Jinjer.jpg
+      6: Wallpaper/White.jpg
+      7: Wallpaper/sexy.jpg
+
+- name: copy from vars
+  copy:
+    src: Wallpaper/metal name.jpg
+    dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+    owner: root
+    group: root
+    when "1" in random_number
+
+- name: copy from vars
+  copy:
+    src: Wallpaper/Angela Gossow.jpg
+    dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+    owner: root
+    group: root
+    when "2" in random_number
+
+- name: copy wallpaper file
+  copy:
+    src: Wallpaper/sexy.jpg
+    dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+    owner: root
+    group: root

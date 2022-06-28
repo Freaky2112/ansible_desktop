@@ -1,3 +1,15 @@
+- name: setup Vars for wallpapers
+  vars:
+    random_number: "{{ 7 | random }}"
+    wall:
+      1: Wallpaper/metal name.jpg
+      2: Wallpaper/Metal name.jpg
+      3: Wallpaper/Angela Gossow 2.jpg
+      4: Wallpaper/Angela Gossow.jpg
+      5: Wallpaper/Jinjer.jpg
+      6: Wallpaper/White.jpg
+      7: Wallpaper/sexy.jpg
+
 - name: copy wallpaper file
   copy:
     src: Wallpaper/metal name.jpg
