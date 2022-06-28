@@ -5,7 +5,7 @@
 
   name: copy from vars 1
   copy:
-    src: metal-name.jpg
+    src: Wallpaper/metal-name.jpg
     dest: /usr/share/backgrounds/ansible-wallpaper.jpg
     owner: root
     group: root
