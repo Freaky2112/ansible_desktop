@@ -16,7 +16,7 @@
   dconf:
     key: "/org/gnome/desktop/background/picture-options"
     value: "'zoom'"
-## Lock Screen Wallpaper
+## Lock Screen Wallpaper not working in gnome 3.36
 - name: Copy lockscreenfile
   copy: 
     src: Wallpaper/White.jpg 
