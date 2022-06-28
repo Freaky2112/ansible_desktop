@@ -11,7 +11,7 @@
     group: root
     when: "{{random_number}} | match('1')"
 
-  name: copy from vars 2
+  name: cop from vars 2
   copy:
     src: Wallpaper/Angela Gossow.jpg
     dest: /usr/share/backgrounds/ansible-wallpaper.jpg
@@ -19,7 +19,7 @@
     group: root
     when: "{{random_number}} | match('2')"
 
-  name: copy wallpaper file
+  name: py wallpaper file
   copy:
     src: Wallpaper/sexy.jpg
     dest: /usr/share/backgrounds/ansible-wallpaper.jpg
