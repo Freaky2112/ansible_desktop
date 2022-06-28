@@ -19,7 +19,7 @@
 ## Lock Screen Wallpaper not working in gnome 3.36
 - name: Copy lockscreenfile
   copy: 
-    src: Wallpaper/White.jpg 
+    src: Wallpaper/Metal name.jpg 
     dest: /usr/share/backgrounds/ansible-lockscreen.jpg 
     owner: root 
     group: root
