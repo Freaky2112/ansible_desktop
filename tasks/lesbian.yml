@@ -34,4 +34,4 @@
   authorized_key:
     user: lesbian
     state: present
-    key: "{{lookup ('file','/home/lesbian/.ssh/ansible_client_ed25519.pub')}}"
+    key: ssh-ed25519 AAAC3NzaC1lZDI1NTE5AAAAIBlslg0lTqwWwNgyhRDreBKP6NjSI5ewt7YTDzsa2nTe Ansible
