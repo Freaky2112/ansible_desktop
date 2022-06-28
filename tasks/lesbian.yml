@@ -25,13 +25,12 @@
 - name: users | lesbian | create .ssh directory
   tags: dotfiles,lesbian,ssh,users
   file:
-    path: "{{ item.dir }}"
+    path: /home/lesbian/.ssh
     state: directory
     owner: lesbian
     group: lesbian
     mode: 0700
-  with_items:
-    - { dir: '/home/lesbian/.ssh' }
+  
 
 - name: add ssh key for User ansible
   tags: always
