@@ -1,4 +1,3 @@
----
 - name: Variables...
   vars:
     random_number: "{{ 3 | random }}"
