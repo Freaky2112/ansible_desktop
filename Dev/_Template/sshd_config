@@ -12,6 +12,8 @@
 
 Include /etc/ssh/sshd_config.d/*.conf
 
+Allow_Users {{ssh_users}}
+
 #Port 22
 #AddressFamily any
 #ListenAddress 0.0.0.0
@@ -31,7 +33,7 @@ Include /etc/ssh/sshd_config.d/*.conf
 # Authentication:
 
 #LoginGraceTime 2m
-#PermitRootLogin prohibit-password
+PermitRootLogin no
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10
