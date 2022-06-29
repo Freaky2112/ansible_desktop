@@ -1,2 +1,4 @@
 nginx_pgk: nginx
 nginx_srv: nginx
+ssh_users: "lesbian freaky"
+ssh_template: sshd_config
