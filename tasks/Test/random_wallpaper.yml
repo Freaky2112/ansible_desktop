@@ -1,5 +1,6 @@
 ---
-- vars:
+- name: Variables...
+  vars:
     random_number: "{{ 3 | random }}"
 
 - name: copy from vars 1
