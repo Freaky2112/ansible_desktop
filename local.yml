@@ -12,7 +12,8 @@
 
 - tasks:
   - name: copy from vars 1
-    debug:
+    ansible.builtin.debug:
+      msg: "{{ item }}"
   - set_fact: 
       wall: "{{ choice | random }}"
     copy:
