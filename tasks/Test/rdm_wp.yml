@@ -1,7 +1,6 @@
 
 ---
-- name: check host
-  hosts: localhost
+- hosts: localhost
   connection: local
   become: true
 
