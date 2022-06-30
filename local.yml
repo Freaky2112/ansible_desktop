@@ -6,16 +6,9 @@
   vars:
     wall: "{{ choice | random }}"  
     choice:
-    - "Wallpaper/Angela Gossow.jpg"
-    - "Wallpaper/Angela Gossow 2.jpg"
-    - "Wallpaper/Arch enemy.jpg"
-    - "Wallpaper/Arch logo.jpg"
-    - "Wallpaper/Arch.jpg"
-    - "Wallpaper/Jinjer.jpg"
     - "Wallpaper/sexy.jpg"
     - "Wallpaper/White.jpg"
     - "Wallpaper/metal name.jpg"
-    - "Wallpaper/War eternal.jpg
 
   tasks:
   - name: copy from vars 1
