@@ -13,7 +13,8 @@
 - tasks:
   - name: copy from vars 1
     debug:
-  - set_fact: wall: "{{ choice | random }}"
+  - set_fact: 
+      wall: "{{ choice | random }}"
     copy:
       src: "{{ wall }}"
       dest: /usr/share/backgrounds/ansible-wallpaper.jpg
