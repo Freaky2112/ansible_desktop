@@ -1,9 +1,7 @@
 ---
 - name: Host name list...
-  hosts: 
-    localhost:
-    vars:
-      ansible_connection: local
+  hosts: localhost
+  connection: local
   become: true
   vars:
     wall: "{{ choice | random }}"  
