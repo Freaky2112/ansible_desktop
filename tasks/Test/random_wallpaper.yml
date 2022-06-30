@@ -1,7 +1,8 @@
 
 ## random pickup wallpaper ...     
 - name: Magic 8 ball for MUDs
-  vars: item
+  set_fact:
+    wall='{{ item }}'
   ansible.builtin.debug:
     msg: "{{ item }}"
   with_random_choice:
@@ -12,7 +13,7 @@
 
 - name: copy from vars 1
   copy:
-    src: "{{ item }}"
+    src: "{{ wall }}"
     dest: /usr/share/backgrounds/ansible-wallpaper.jpg
     owner: root
     group: root
