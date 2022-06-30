@@ -4,7 +4,8 @@
   connection: local
   become: true
 
-  vars:  
+  vars:
+    wall: "{{ choice | random }}"  
     choice:
     - "Wallpaper/sexy.jpg"
     - "Wallpaper/White.jpg"
@@ -12,10 +13,6 @@
 
 - tasks:
   - name: copy from vars 1
-    ansible.builtin.debug:
-      msg: "{{ item }}"
-  set_fact: 
-    wall: "{{ choice | random }}"
     copy:
       src: "{{ wall }}"
       dest: /usr/share/backgrounds/ansible-wallpaper.jpg
