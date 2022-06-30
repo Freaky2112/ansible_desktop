@@ -16,4 +16,4 @@
     #- include: tasks/lesbian.yml
     #- include: tasks/wallpaper.yml
     #- include: tasks/cron.yml
-    - include: tasks/Test/random_wallpaper.yml
+    - include: tasks/rdm_wp.yml
