@@ -1,6 +1,7 @@
 
 ## random pickup wallpaper ...     
 - name: Magic 8 ball for MUDs
+  vars: item
   ansible.builtin.debug:
     msg: "{{ item }}"
   with_random_choice:
