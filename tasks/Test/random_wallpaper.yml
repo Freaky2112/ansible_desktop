@@ -10,9 +10,10 @@
      - "do nothing"
   register: choice
 
+- name: set ressult to fact 
+  set_fact: wall: "{{ choice.results }}"
+
 - name: copy from vars 1
-  set_fact:
-    wall: "{{ choice.results}}"
   copy:
     src: "{{ wall }}"
     dest: /usr/share/backgrounds/ansible-wallpaper.jpg
