@@ -12,7 +12,7 @@
 
 - tasks:
   - name: copy from vars 1
-  debug:
+    debug:
   - set_fact: wall: "{{ choice | random }}"
     copy:
       src: "{{ wall }}"
