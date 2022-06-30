@@ -11,7 +11,7 @@
   register: choice
 
 - name: set ressult to fact 
-  set_fact: wall: "{{ choice.results }}"
+  set_fact: wall: "{{ choice.results[0].item }}"
 
 - name: copy from vars 1
   copy:
