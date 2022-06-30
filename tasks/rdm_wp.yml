@@ -4,15 +4,15 @@
   connection: local
   become: true
 
-vars: choice
-  - "Wallpaper/sexy.jpg"
-  - "Wallpaper/White.jpg"
-  - "Wallpaper/metal name.jpg"
+#vars: choice
+#  - "Wallpaper/sexy.jpg"
+#  - "Wallpaper/White.jpg"
+#  - "Wallpaper/metal name.jpg"
 
-  - name: ressult to fact
-      set_fact: wall: "{{ choice | random }}"
+#  - name: ressult to fact
+#      set_fact: wall: "{{ choice | random }}"
 
-tasks:
+- tasks:
   - name: copy from vars 1
     copy:
       src: "{{ wall }}"
