@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  
+- tasks:
+  - name: Magic 8 ball for MUDs
+    ansible.builtin.debug:
+      msg: "{{ item }}"
+    with_random_choice:
+       - "Wallpaper/sexy.jpg"
+       - "Wallpaper/metal name.jpg"
+       - "Wallpaper/White.jpg"
+       - "do nothing"
