@@ -3,8 +3,6 @@
 - name: Magic 8 ball for MUDs
   ansible.builtin.debug:
     msg: "{{ item }}"
-  with_items:
-    - "{{ item }}"
   with_random_choice:
      - "Wallpaper/sexy.jpg"
      - "Wallpaper/metal name.jpg"
@@ -12,7 +10,9 @@
      - "do nothing"
   register: choice
 
-- name: set ressult to fact 
+- name: set ressult to fact
+  with_items:
+    - "{{ item }}" 
   set_fact: wall: "{{ choice.results[0].item }}"
 
 - name: copy from vars 1
