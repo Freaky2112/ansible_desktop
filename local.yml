@@ -1,6 +1,7 @@
 ---
-- name: name host
-  hosts: localhost
+- name: Host name list...
+  hosts: 
+    localhost:
   connection: local
   become: true
   vars:
