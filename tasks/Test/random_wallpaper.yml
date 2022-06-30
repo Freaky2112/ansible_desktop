@@ -1,30 +1,20 @@
-- name: Variables...
-  vars:
-    random_number: "{{ 3 | random }}"
+
+## random pickup wallpaper ...     
+- name: Magic 8 ball for MUDs
+  ansible.builtin.debug:
+    msg: "{{ item }}"
+  with_random_choice:
+     - "Wallpaper/sexy.jpg"
+     - "Wallpaper/metal name.jpg"
+     - "Wallpaper/White.jpg"
+     - "do nothing"
 
 - name: copy from vars 1
   copy:
-    src: "Wallpaper/White.jpg"
+    src: "{{ item }}"
     dest: /usr/share/backgrounds/ansible-wallpaper.jpg
     owner: root
     group: root
-    when: "{{ lookup(random_number)}} | match('1')"
-
-- name: cop from vars 2
-  copy:
-    src: Wallpaper/Angela Gossow.jpg
-    dest: /usr/share/backgrounds/ansible-wallpaper.jpg
-    owner: root
-    group: root
-    when: "{{ lookup(random_number)}} | match('2')"
-
-- name: py wallpaper file
-  copy:
-    src: Wallpaper/sexy.jpg
-    dest: /usr/share/backgrounds/ansible-wallpaper.jpg
-    owner: root
-    group: root
-    when: "{{ lookup(random_number)}} | match('3')"
 
 - name: set wallpaper
   become_user: freaky
