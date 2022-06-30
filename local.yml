@@ -12,7 +12,7 @@
     - "Wallpaper/White.jpg"
     - "Wallpaper/metal name.jpg"
 
-- tasks:
+  tasks:
   - name: copy from vars 1
     copy:
       src: "{{ wall }}"
