@@ -1,19 +1,34 @@
+
 ---
 - hosts: localhost
   connection: local
   become: true
 
-  pre_tasks:
-    - name: update repositories
-      package:
-        update_cache: yes
-      changed_when: False
-  
-  tasks:
-    #- include: tasks/packages.yml
-    #- include: tasks/bash.yml
-    #- include: tasks/tmux.yml
-    #- include: tasks/lesbian.yml
-    #- include: tasks/wallpaper.yml
-    #- include: tasks/cron.yml
-    - include: tasks/rdm_wp.yml
+  vars:  
+    choice:
+    - "Wallpaper/sexy.jpg"
+    - "Wallpaper/White.jpg"
+    - "Wallpaper/metal name.jpg"
+
+- tasks:
+  - name: copy from vars 1
+    debug:
+  - set_fact: 
+      wall: "{{ choice | random }}"
+    copy:
+      src: "{{ wall }}"
+      dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+      owner: root
+      group: root
+
+  - name: set wallpaper
+    become_user: freaky
+    dconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
+
+  - name: set wallpaper position
+    become_user: freaky
+    dconf:
+      key: "/org/gnome/desktop/background/picture-options"
+      value: "'zoom'"
