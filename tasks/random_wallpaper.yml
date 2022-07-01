@@ -1,3 +1,4 @@
+---
 - name: Host name list...
   hosts: localhost
   connection: local
