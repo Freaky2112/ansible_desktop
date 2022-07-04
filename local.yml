@@ -16,6 +16,6 @@
     - include: tasks/lesbian.yml
     - include: tasks/unattended_upgrades.yml
     - include: tasks/wallpaper.yml
-    - include: Keyboard_layout.yml
+    #- include: Keyboard_layout.yml
     #- include: tasks/cron.yml
     
