@@ -1,0 +1,9 @@
+- name: dev packages
+  tags: dev
+  package:
+    name:
+      - git
+      - perl
+      - tig
+    state: latest
+    

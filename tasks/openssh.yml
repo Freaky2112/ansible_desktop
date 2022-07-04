@@ -1,0 +1,35 @@
+- name: open ssh | install openssh or update
+  tags: openssh,ssh,system,setting
+  package:
+    name: openssh-server
+    state: latest
+  notify: restart_sshd
+
+- name: open ssh | enable service
+  tags: openssh,ssh,system,setting
+  service: 
+    name: ssh
+    enabled: yes
+    state: started
+
+## config files
+
+- name: open ssh | generate sshd_config files from template
+  tags: openssh,ssh,system,setting
+  template:
+    src: /sshd_config
+    dest: /etc/ssh/sshd_config
+    owner: root
+    mode: 0644
+  notify: restart_sshd
+
+- name: openssh | issue.net | log-in message
+  tags: openssh,ssh,system,setting
+  copy:
+    src: /openssh_issue.net
+    dest: /etc/issue.net
+    owner: root
+    group: root
+    mode: 0644
+
+

@@ -8,5 +8,29 @@
       - wget
       - python3-psutil
       - net-tools
+      - zsh
+      - rsync
+      - sshfs
+      - traceroute
+      - whois
+      - nmap
+      - colordiff
+      - at    
     state: latest
 
+
+## package to validate ...
+
+#      - "{{ dns_utils_package}}"
+#      - iotop
+#      - "{{ lm_sensors_package }}"
+#      - lsof
+#      - mc
+#      - mosh
+#      - ncdu
+#      - neofetch
+#      - "{{ nfs_client_package }}"
+#      - ranger
+#      - "{{ rename_package }}"
+#      - screen
+#      - "{{ vim_package }}"
