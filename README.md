@@ -11,7 +11,7 @@ ansible-pull -K -U https://github.com/Freaky2112/ansible_desktop.git
 
 + randow wallpaper (set random wallpaper)
 + sshkey (push sshkey)
-+ tmux (install tmux and config)
++ tmux (copy tmux config)
 + unattended_upgrade (config unattended upgrade)
 + unattended (make sure unattended is install)
 + upgrade (do a distro upgrade)
