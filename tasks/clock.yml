@@ -15,5 +15,5 @@
 - name: clock | set time zone
   tags: ntp
   timezone:
-    name: "America/Toronto"
+    name: "America/Montreal"
 
