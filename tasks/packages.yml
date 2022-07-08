@@ -6,7 +6,7 @@
       - tmux
       - curl
       - wget
-      - "{{ python_psutil_package }}"
+      #- "{{ python_psutil_package }}"
       - net-tools
       - zsh
       - rsync
@@ -16,7 +16,7 @@
       - nmap
       - colordiff
       - at    
-      - "{{ dns_utils_package }}"
+      #- "{{ dns_utils_package }}"
       - screen
 
     state: latest
