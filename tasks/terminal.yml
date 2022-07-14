@@ -1,0 +1,57 @@
+- name: set terminal color
+  dconf:
+    key: "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9"
+    value: "background-color='rgb(0,0,0)'"
+- name: set terminal color foreground
+  dconf:
+    key: "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9"
+    value: "foreground-color='rgb(0,255,0)'"
+- name: set terminal color background
+  dconf:
+    key: "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9"
+    value: "'use-theme-colors=false'"
+
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'date-format='regular''"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'location-mode='path-bar''"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'show-hidden=false'"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'show-size-column=true'"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'show-type-column=true'"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'sidebar-width=303'"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'sort-column='name''"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'sort-directories-first=false'"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'sort-order='descending''"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'type-format='category''"
+- name: set terminal | size | font
+  dconf:
+    key: "org/gtk/settings/file-chooser"
+    value: "'window-position=(72, 27)'"
