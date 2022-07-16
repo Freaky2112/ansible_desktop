@@ -4,6 +4,7 @@
   become: true
   package:
     name:
+      - ssh
       - htop
       - tmux
       - curl
