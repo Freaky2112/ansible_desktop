@@ -12,35 +12,30 @@
   when: gnome_terminal_set_colour_theme
 
 - name: Set use-theme-colors
-  become: false
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-theme-colors"
     value: "false"
   when: gnome_terminal_set_colour_theme
 
 - name: Set background-color
-  become: false
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}background-color"
     value: "'rgb(0,0,0)'"
   when: gnome_terminal_set_colour_theme
 
 - name: Set use-transparent-background
-  become: false
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-transparent-background"
     value: "true"
   when: gnome_terminal_set_colour_theme
 
 - name: Set use-theme-transparency
-  become: false
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-theme-transparency"
     value: "false"
   when: gnome_terminal_set_colour_theme
 
 - name: Set background-transparency-percent
-  become: false
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}background-transparency-percent"
     value: "14"
