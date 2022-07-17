@@ -1,18 +1,49 @@
-- name: set terminal color
+---
+- name: Set foreground-color
+  become: false
   dconf:
-    key: "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-color"
-    value: "'rgb(0,0,0)'"
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}foreground-color"
+    value: "'rgb(255,142,30)'"
   when: gnome_terminal_set_colour_theme
 
-- name: set terminal color foreground
+- name: Set palette
+  become: false
   dconf:
-    key: "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/foreground-color"
-    value: "'rgb(0,255,0)'"
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}palette"
+    value: "['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']"
   when: gnome_terminal_set_colour_theme
 
-- name: set terminal color background
+- name: Set use-theme-colors
+  become: false
   dconf:
-    key: "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors"
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-theme-colors"
     value: "false"
   when: gnome_terminal_set_colour_theme
 
+- name: Set background-color
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}background-color"
+    value: "'rgb(0,0,0)'"
+  when: gnome_terminal_set_colour_theme
+
+- name: Set use-transparent-background
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-transparent-background"
+    value: "true"
+  when: gnome_terminal_set_colour_theme
+
+- name: Set use-theme-transparency
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-theme-transparency"
+    value: "false"
+  when: gnome_terminal_set_colour_theme
+
+- name: Set background-transparency-percent
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}background-transparency-percent"
+    value: "14"
+  when: gnome_terminal_set_colour_theme
