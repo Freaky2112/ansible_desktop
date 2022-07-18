@@ -10,13 +10,13 @@
       changed_when: False
   
   tasks:
-    #- include: tasks/packages.yml
-    #- include: tasks/bash.yml
-    #- include: tasks/tmux.yml
-    #- include: tasks/lesbian.yml
-    #- include: tasks/unattended_upgrades.yml
-    #- include: tasks/wallpaper.yml
-    - include: tasks/term.yml
+    - include: tasks/packages.yml
+    - include: tasks/bash.yml
+    - include: tasks/tmux.yml
+    - include: tasks/lesbian.yml
+    - include: tasks/unattended_upgrades.yml
+    - include: tasks/wallpaper.yml
+    # include: tasks/term.yml
     #- include: Keyboard_layout.yml
     #- include: tasks/cron.yml
     
