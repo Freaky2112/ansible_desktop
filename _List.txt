@@ -1,20 +1,22 @@
 ok - bash.yml -> copy bashrc profile
 ok - clock.yml -> set timezone
-create_profile.yml -> get profile id for terminal
-cron.yml -> set cron job
 ok - lesbian -> create user for ansible add it to sudoers and add sshkey
-- locale.yml -> set region and keyboard
+ok - locale.yml -> set region and keyboard
 ok - microcode.yml -> set microcode for intel or amd
-openssh.yml -> make sure ssh is install and copy ssh config file 
-- package_cleanup.yml -> remove unnecessary package
-package_dev.yml -> install dev package
 ok - packages.yml -> install standard package
-profile_id.yml -> profile id for terminal
-random_wallpaper.yml -> set random random_wallpaper
-sshkey.yml -> copy sshkey for user 
-terminal.yml -> set terminal color background and text
 ok - tmux.yml -> copy tmux config
 ok - unattended_upgrades.yml -> copy config for unattended_upgrades
 ok - unattended.yml -> install unattended_upgrades
 ok - upgarde.yml -> do distro upgarde
 ok - wallpaper.yml -> set wallpaper
+
+- create_profile.yml -> get profile id for terminal
+- profile_id.yml -> profile id for terminal
+- terminal.yml -> set terminal color background and text
+- package_cleanup.yml -> remove unnecessary package
+- package_dev.yml -> install dev package
+- cron.yml -> set cron job
+
+working - random_wallpaper.yml -> set random random_wallpaper
+working - sshkey.yml -> copy sshkey for user 
+working - openssh.yml -> make sure ssh is install and copy ssh config file

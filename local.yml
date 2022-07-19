@@ -18,9 +18,9 @@
     - include: tasks/unattended_upgrades.yml
     - include: tasks/wallpaper.yml
     - include: tasks/clock.yml
-    - include: tasks/locale.yml
-    - include: tasks/package_cleanup.yml
-    - include: tasks/microcode.yml
+    - include: tasks/locale.ym
+    - include: tasks/microcode.ymll
+    #- include: tasks/package_cleanup.yml
     #- include: tasks/term.yml
     #- include: Keyboard_layout.yml
     #- include: tasks/cron.yml
