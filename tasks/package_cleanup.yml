@@ -1,5 +1,6 @@
 - name: cleanup packages remove unneeded packages...
   tags: cleanup
+  become: true
   package:
     name: 
       - cowsay
