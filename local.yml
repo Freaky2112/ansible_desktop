@@ -20,6 +20,7 @@
     - include: tasks/clock.yml
     - include: tasks/locale.yml
     - include: tasks/microcode.yml
+    - include: tasks/upgrade.yml
     #- include: tasks/package_cleanup.yml
     #- include: tasks/term.yml
     #- include: Keyboard_layout.yml
