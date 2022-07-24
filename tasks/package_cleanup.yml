@@ -1,8 +1,8 @@
 - name: cleanup packages remove unneeded packages...
   tags: cleanup
   become: true
-  apt:
-    pkg:
+  package:
+    name:
       - cowsay
       - vim
       - exim4
