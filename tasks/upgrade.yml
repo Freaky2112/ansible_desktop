@@ -1,6 +1,6 @@
 - name: Do Distro Upgrade
   become: true
-  package:
+  apt:
     update_cache: yes
     upgrade: dist
     force_apt_get: yes 
