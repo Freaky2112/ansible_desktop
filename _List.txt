@@ -11,17 +11,15 @@ ok - unattended_upgrades.yml -> copy config for unattended_upgrades
 ok - unattended.yml -> install unattended_upgrades
 ok - upgarde.yml -> do distro upgarde
 ok - wallpaper.yml -> set wallpaper
+ok - terminal.yml -> set terminal color background and text
 
 ## Stuff in Dev...  ##
-## work on terminal next priority ##
-- create_profile.yml -> get profile id for terminal
-- profile_id.yml -> profile id for terminal
-- terminal.yml -> set terminal color background and text
 - package_cleanup.yml -> remove unnecessary package
-- package_dev.yml -> install dev package
 - cron.yml -> set cron job
+- keyboard_layout.yml -> set keyboard to us 
 
 ## working but not in the local.yml file ##
 working - random_wallpaper.yml -> set random random_wallpaper
 working - sshkey.yml -> copy sshkey for user 
 working - openssh.yml -> make sure ssh is install and copy ssh config file
+working - package_dev.yml -> install dev package
