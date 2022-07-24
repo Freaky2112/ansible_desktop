@@ -1,3 +1,5 @@
+
+## working and implemented in local.yml file ##
 ok - bash.yml -> copy bashrc profile
 ok - clock.yml -> set timezone
 ok - lesbian -> create user for ansible add it to sudoers and add sshkey
@@ -10,6 +12,8 @@ ok - unattended.yml -> install unattended_upgrades
 ok - upgarde.yml -> do distro upgarde
 ok - wallpaper.yml -> set wallpaper
 
+## Stuff in Dev...  ##
+## work on terminal next priority ##
 - create_profile.yml -> get profile id for terminal
 - profile_id.yml -> profile id for terminal
 - terminal.yml -> set terminal color background and text
@@ -17,6 +21,7 @@ ok - wallpaper.yml -> set wallpaper
 - package_dev.yml -> install dev package
 - cron.yml -> set cron job
 
+## working but not in the local.yml file ##
 working - random_wallpaper.yml -> set random random_wallpaper
 working - sshkey.yml -> copy sshkey for user 
 working - openssh.yml -> make sure ssh is install and copy ssh config file
