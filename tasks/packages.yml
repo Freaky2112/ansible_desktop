@@ -1,4 +1,4 @@
-- include_vars: vars.yml
+- include_vars: vars_package.yml
 
 - name: Install packages
   become: true
