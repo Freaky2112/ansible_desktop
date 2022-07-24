@@ -16,7 +16,7 @@
 - name: set terminal transparency
   become_user: freaky
   dconf:
-    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/backgroud-transparency-percent"
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-transparency-percent"
     value: "75"
   #when: gnome_terminal_set_color_theme
 
