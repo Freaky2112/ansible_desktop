@@ -6,10 +6,8 @@ ansible-pull -K -U https://github.com/Freaky2112/ansible_desktop.git
 + locale (set Country and keyboard Vars)
 + openssh (ssh rules)
 
-- package_cleanup (remove unwanted apps)
 - package (install wanted apps)
 
-+ randow wallpaper (set random wallpaper)
 + sshkey (push sshkey)
 + tmux (copy tmux config)
 + unattended_upgrade (config unattended upgrade)
