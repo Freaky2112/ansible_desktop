@@ -4,32 +4,32 @@
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-color"
     value: "'rgb(0,0,0)'"
-  when: gnome_terminal_set_color_theme
+  #when: gnome_terminal_set_color_theme
 
 - name: set terminal color foreground
   become_user: freaky
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/foreground-color"
     value: "'rgb(255,142,30)'"
-  when: gnome_terminal_set_color_theme
+  #when: gnome_terminal_set_color_theme
 
 - name: set terminal transparency
   become_user: freaky
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/backgroud-transparency-percent"
     value: "25"
-  when: gnome_terminal_set_color_theme
+  #when: gnome_terminal_set_color_theme
 
 - name: set terminal transparency theme to False
   become_user: freaky
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-transparency"
     value: "false"
-  when: gnome_terminal_set_color_theme
+  #when: gnome_terminal_set_color_theme
 
 - name: set terminal transparency to "true"
   become_user: freaky
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-transparency-backgroud"
     value: "true"
-  when: gnome_terminal_set_color_theme
+  #when: gnome_terminal_set_color_theme
