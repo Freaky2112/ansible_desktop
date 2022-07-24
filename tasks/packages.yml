@@ -1,18 +1,21 @@
-- include_vars: ubuntu.yml
+- include_vars: vars.yml
 
 - name: Install packages
   become: true
   package:
     name:
-      - ssh
-      - htop
-      - tmux
-      - curl
-      - wget
+      - "{{ openssh_server_package }}"
+      - "{{ openssh_service }}"
+      - "{{ monitor_system }}"
+      - "{{ mutli_terminal }}"
+      - "{{ curl_package }}"
+      - "{{ wget_package }}"
+      - "{{ python_package }}"
       - "{{ python_psutil_package }}"
-      - net-tools
+      - "{{ network_tools }}"
+      - "{{ dconf_package }}"
       - zsh
-      - rsync
+      - " {{ rsync_package }}"
       - sshfs
       - traceroute
       - whois
@@ -21,5 +24,14 @@
       - at    
       - "{{ dns_utils_package }}"
       - screen
+
+
+
+
+
+
+
+
+
 
     state: latest
