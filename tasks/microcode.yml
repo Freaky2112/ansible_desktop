@@ -1,4 +1,4 @@
-- include_vars: ubuntu.yml
+- include_vars: vars_microcode.yml
 
 - name: microcode | install pacakage for amd
   tags: amd,cpu,microcode
