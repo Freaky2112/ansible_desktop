@@ -9,4 +9,4 @@
       - exim4-base
       - exim4-config
     state: absent
-  # when: ansible_distrubution in ["Debian", "Ubuntu"]
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
