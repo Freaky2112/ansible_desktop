@@ -1,14 +1,16 @@
+- include_vars: vars_package.yml
+
 - name: open ssh | install openssh or update
   tags: openssh,ssh,system,setting
   package:
-    name: openssh-server
+    name: "{{openssh_server_package}}"
     state: latest
   notify: restart_sshd
 
 - name: open ssh | enable service
   tags: openssh,ssh,system,setting
   service: 
-    name: ssh
+    name: "{{openssh_service}}"
     enabled: yes
     state: started
 
