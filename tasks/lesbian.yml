@@ -1,3 +1,5 @@
+- include_vars: vars_user.yml
+
 - name: users | lesbian | create group
   group:
     name: lesbian
@@ -31,7 +33,7 @@
   
 
 - name: add ssh key for User ansible
-  become_user: lesbian
+  become_user: "{{ansible_user}}"
   authorized_key:
     user: lesbian
     state: present
