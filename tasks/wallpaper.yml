@@ -1,3 +1,5 @@
+- include_vars: vars_user.yml
+
 - name: copy wallpaper file
   copy:
     src: Wallpaper/Arch logo.jpg
@@ -6,13 +8,13 @@
     group: root
 
 - name: set wallpaper
-  become_user: freaky
+  become_user: "{{main_user}}"
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
     value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
 - name: set wallpaper position
-  become_user: freaky
+  become_user: "{{main_user}}"
   dconf:
     key: "/org/gnome/desktop/background/picture-options"
     value: "'zoom'"
@@ -25,6 +27,6 @@
     group: root
 
 - name: Set lock screen background
-  become_user: freaky
+  become_user: "{{main_user}}"
   dconf: key="/org/gnome/desktop/screensaver/picture-uri" 
     value="'file:///usr/share/backgrounds/ansible-lockscreen.jpg'"
