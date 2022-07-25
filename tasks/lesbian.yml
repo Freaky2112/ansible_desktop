@@ -9,7 +9,7 @@
   user:
     name: "{{ansible_user}}"
     group: "{{ansible_user}}"
-    groups: "{{ansible_user}}" 'root'
+    groups: "{{ansible_user}} , root"
     state: present
     comment: "ansible User"
     
