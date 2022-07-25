@@ -2,14 +2,14 @@
 
 - name: users | lesbian | create group
   group:
-    name: lesbian
+    name: "{{ansible_user}}"
     state: present
 
 - name: users | lesbian | create user
   user:
-    name: lesbian
-    group: lesbian
-    groups: lesbian, root
+    name: "{{ansible_user}}"
+    group: "{{ansible_user}}"
+    groups: "{{ansible_user}}", root
     state: present
     comment: "ansible User"
     
@@ -27,14 +27,14 @@
   file:
     path: /home/lesbian/.ssh
     state: directory
-    owner: lesbian
-    group: lesbian
+    owner: "{{ansible_user}}"
+    group: "{{ansible_user}}"
     mode: 0700
   
 
 - name: add ssh key for User ansible
   become_user: "{{ansible_user}}"
   authorized_key:
-    user: lesbian
+    user: "{{ansible_user}}"
     state: present
     key: ssh-ed25519 AAAC3NzaC1lZDI1NTE5AAAAIBlslg0lTqwWwNgyhRDreBKP6NjSI5ewt7YTDzsa2nTe Ansible
