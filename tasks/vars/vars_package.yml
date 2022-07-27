@@ -19,3 +19,4 @@ rsync_package: rsync
 git_package: git
 perl_package: perl
 tig_package: tig
+matrix: cmatrix
