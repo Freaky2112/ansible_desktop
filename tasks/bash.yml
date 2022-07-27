@@ -1,3 +1,8 @@
+- name: backup bashrc
+  copy:
+    src: /home/freaky/.bashrc
+    dest: /home/freaky/.bashrc.bak
+
 - name: copy bashrc file
   copy:
     src: files/bashrc
