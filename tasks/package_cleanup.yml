@@ -1,3 +1,5 @@
+# remove unwanted packages for fresh intsall 
+
 - name: cleanup packages remove unneeded packages...
   tags: cleanup
   become: true

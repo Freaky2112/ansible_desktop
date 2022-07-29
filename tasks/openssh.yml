@@ -1,5 +1,6 @@
 - include_vars: vars_package.yml
 
+# install openssh server on machine
 - name: open ssh | install openssh or update
   tags: openssh,ssh,system,setting
   package:
@@ -7,6 +8,7 @@
     state: latest
   notify: restart_sshd
 
+# make sure openssh is started and enable
 - name: open ssh | enable service
   tags: openssh,ssh,system,setting
   service: 
@@ -14,7 +16,7 @@
     enabled: yes
     state: started
 
-## config files
+## copy ssh config files
 
 - name: open ssh | generate sshd_config files from template
   tags: openssh,ssh,system,setting
@@ -25,6 +27,7 @@
     mode: 0644
   notify: restart_sshd
 
+# set log-in message on ssh 
 - name: openssh | issue.net | log-in message
   tags: openssh,ssh,system,setting
   copy:

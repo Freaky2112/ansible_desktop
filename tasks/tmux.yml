@@ -1,3 +1,4 @@
+# copy tmux config file
 - name: copy tmux config file
   copy:
     src: files/tmux.conf

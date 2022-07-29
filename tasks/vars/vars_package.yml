@@ -1,3 +1,4 @@
+# Vars for packages to install standard app for desktop
 
 cron_package: cron
 dconf_package: dconf-cli
