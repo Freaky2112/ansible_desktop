@@ -22,7 +22,7 @@
     - include: tasks/clock.yml
     - include: tasks/locale.yml
     - include: tasks/microcode.yml
-    - include: tasks/upgrade.yml
+    #- include: tasks/upgrade.yml
     #- include: Keyboard_layout.yml
     #- include: tasks/cron.yml
     
