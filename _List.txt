@@ -14,7 +14,6 @@ ok - wallpaper.yml -> set wallpaper
 ok - terminal.yml -> set terminal color background and text
 
 ## Stuff in Dev...  ##
-- package_cleanup.yml -> remove unnecessary package
 - cron.yml -> set cron job
 - keyboard_layout.yml -> set keyboard to us 
 
@@ -23,3 +22,4 @@ working - random_wallpaper.yml -> set random random_wallpaper
 working - sshkey.yml -> copy sshkey for user 
 working - openssh.yml -> make sure ssh is install and copy ssh config file
 working - package_dev.yml -> install dev package
+working - package_cleanup.yml -> remove unnecessary package
