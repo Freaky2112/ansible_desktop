@@ -1,3 +1,4 @@
+---
 - name: Check if my_package is installed
   command: dpkg-query -W my_package
   register: my_package_check_deb
