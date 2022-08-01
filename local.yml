@@ -25,4 +25,4 @@
     #- include: tasks/upgrade.yml
     ##- include: Keyboard_layout.yml
     ##- include: tasks/cron.yml
-    - include: tasks/Install_discord.yml
+    - include: tasks/Instal_discord.yml
