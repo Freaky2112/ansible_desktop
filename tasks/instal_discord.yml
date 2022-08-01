@@ -5,7 +5,7 @@
     dest="/home/freaky/Downloads/{{my_package}}.deb"
   when: my_package_check_deb.rc == 1
 
-- name: Install Package
+- name: ackage
   apt: deb="/home/freaky/Downloads/{{my_package}}.deb"
   sudo: true
   when: my_package_check_deb.rc == 1
