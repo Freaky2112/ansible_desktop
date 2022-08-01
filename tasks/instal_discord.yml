@@ -5,6 +5,7 @@
     url="https://discord.com/api/download?platform=linux&format=deb"
     dest="/home/freaky/Downloads/{{my_package}}.deb"
   when: my_package_check_deb.rc == 1
+  
 - name: test  
   apt: deb="/home/freaky/Downloads/{{my_package}}.deb"
   sudo: true
