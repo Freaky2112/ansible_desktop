@@ -1,4 +1,4 @@
-- name: Download my_package
+- name: Download Discord
   become_user: freaky
   get_url: 
     url=https://discord.com/api/download?platform=linux&format=deb
