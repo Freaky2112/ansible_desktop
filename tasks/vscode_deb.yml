@@ -1,0 +1,10 @@
+- name: Download Vscode
+  become_user: freaky
+  get_url: 
+    url=https://code.visualstudio.com/download#
+    dest=/home/freaky/Downloads/vscode.deb
+ 
+- name: Install Vscode 
+  become: true
+  apt: 
+    deb=/home/freaky/Downloads/vscode.deb
