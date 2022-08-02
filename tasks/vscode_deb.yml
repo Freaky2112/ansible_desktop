@@ -1,9 +1,3 @@
-- name: some variables
-  vars: 
-    vscode_ppa: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-    vscode_ppa_key: https://packages.microsoft.com/keys/microsoft.asc
-    vscode_ppa_id: BE1229CF
-
 - name: add vscode repo
   apt_repository: repo="{{ vscode_ppa }}" state=present
   sudo: true
