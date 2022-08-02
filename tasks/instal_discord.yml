@@ -4,6 +4,10 @@
     url=https://discord.com/api/download?platform=linux&format=deb
     dest=/home/freaky/Downloads/discord.deb
  
+- name: Install Discord 
+  become: true
+  apt: 
+    deb=/home/freaky/Downloads/discord.deb
 
 #- name: Install my_package
 #  apt: deb=/home/freaky/Downloads/discord.deb
