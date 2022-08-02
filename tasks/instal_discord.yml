@@ -2,10 +2,10 @@
   become_user: freaky
   get_url: 
     url=https://discord.com/api/download?platform=linux&format=deb
-    dest="/home/freaky/Downloads/discord.deb"
+    dest=/home/freaky/Downloads/discord.deb
   when: my_package_check_deb.rc == 1
 
 - name: Install my_package
-  apt: deb="/home/freaky/Downloads/discord.deb"
+  apt: deb=/home/freaky/Downloads/discord.deb
   sudo: true
   when: my_package_check_deb.rc == 1
