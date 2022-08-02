@@ -1,7 +1,8 @@
+---
 - vars:
-  vscode_ppa: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-  vscode_ppa_key: https://packages.microsoft.com/keys/microsoft.asc
-  vscode_ppa_id: BE1229CF
+    vscode_ppa: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    vscode_ppa_key: https://packages.microsoft.com/keys/microsoft.asc
+    vscode_ppa_id: BE1229CF
 
 - name: Add vscode repository
   apt_repository: repo="{{ vscode_ppa }}" state=present
