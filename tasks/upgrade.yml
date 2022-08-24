@@ -1,5 +1,6 @@
 # Do Distro Upgrade
 - name: Do Distro Upgrade
+  tags: upgrade
   become: true
   ansible.builtin.apt:
     upgrade: dist

@@ -2,13 +2,15 @@
 - include_vars: sshkey.yml
 
 # create group lesbain for ansible
-- name: users | lesbian | create group
+- name: users | ansible | create group
+  tags: group
   group:
     name: "{{ansible_user}}"
     state: present
 
 # create user lesbian and add group
-- name: users | lesbian | create user
+- name: users | ansible | create user
+  tags: user
   user:
     name: "{{ansible_user}}"
     group: "{{ansible_user}}"
@@ -17,7 +19,8 @@
     comment: "ansible User"
 
 # add user lesbian to sudoers file
-- name: users | lesbian | add sudoers file
+- name: users | ansible | add sudoers file
+  tags: sudoer sudoers
   become: true
   copy:
     src: sudoers_lesbian
@@ -27,7 +30,8 @@
     mode: 0440
 
 # create .ssh directory for user lesbian
-- name: users | lesbian | create .ssh directory
+- name: users | ansible | create .ssh directory
+  tags: ssh
   file:
     path: /home/lesbian/.ssh
     state: directory
@@ -37,6 +41,7 @@
   
 # add sshkey for user lesbian
 - name: add ssh key for User ansible
+  tags: ssh sshkey
   become_user: "{{ansible_user}}"
   authorized_key:
     user: "{{ansible_user}}"

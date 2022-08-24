@@ -1,4 +1,5 @@
 - name: add ssh key for User ansible
+  tags: ssh sshkey 
   become_user: lesbian
   authorized_key:
     user: lesbian

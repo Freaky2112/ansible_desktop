@@ -1,6 +1,7 @@
 - include_vars: vars_package.yml
 
 - name: Install packages
+  tags: package
   become: true
   package:
     name:

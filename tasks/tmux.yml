@@ -1,5 +1,13 @@
+# copy current bashrc to .bak 
+- name: backup tmux config file
+  tags: tmux
+  copy:
+    src: /home/freaky/.tmux.conf
+    dest: /home/freaky/.tmux.bak
+
 # copy tmux config file
 - name: copy tmux config file
+  tags: tmux
   copy:
     src: files/tmux.conf
     dest: /home/freaky/.tmux.conf
