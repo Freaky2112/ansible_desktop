@@ -25,14 +25,4 @@
       - at    
       - "{{ dns_utils_package }}"
       - screen
-
-
-
-
-
-
-
-
-
-
     state: latest
