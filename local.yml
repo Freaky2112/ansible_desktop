@@ -13,7 +13,7 @@
     - include: tasks/packages.yml
     - include: tasks/terminal.yml
     - include: tasks/bash.yml
-    - include: tasks/tmux.yml
+    #- include: tasks/tmux.yml
     - include: tasks/lesbian.yml
     - include: tasks/unattended.yml
     - include: tasks/unattended_upgrades.yml
