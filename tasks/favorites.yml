@@ -1,0 +1,8 @@
+- include_vars: vars_user.yml
+
+- name: change Favorites...
+  tag: Favorites
+  become_user: "{{main_user}}"
+  dconf:
+    key: "/org/gnome/shell/favorite-apps"
+    value: "'firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'code.desktop', 'discord.desktop'"
