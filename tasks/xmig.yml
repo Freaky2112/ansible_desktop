@@ -15,12 +15,11 @@
     repo: 'https://github.com/xmrig/xmrig.git'
     clone: yes
 
-- name: install xmrig
-    shell:
-      args: 
-          chdir: xmrig 
-    cmd: mkdir build
-    cmd: cd build
-    cmd: cmake ..
-    cmd: make
-
+#- name: install xmrig
+#    shell:
+#      args: 
+#          chdir: xmrig 
+#    cmd: mkdir build
+#    cmd: cd build
+#    cmd: cmake ..
+#    cmd: make
