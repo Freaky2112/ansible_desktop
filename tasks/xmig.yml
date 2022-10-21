@@ -2,7 +2,7 @@
 
 - name: Install dependency
   tags: xmrig
-  become_user: "{{main_user}}"
+  become: true
   package:
     name:
       - build-essential 
@@ -12,10 +12,11 @@
       - libhwloc-dev
     state: latest
 
-- name: git clone xmrig
-  git:
-    repo: 'https://github.com/xmrig/xmrig.git'
-    clone: yes
+#- name: git clone xmrig
+#  become_user: "{{main_user}}"
+#  git:
+#    repo: 'https://github.com/xmrig/xmrig.git'
+#    clone: yes
 
 #- name: install xmrig
 #    shell:
