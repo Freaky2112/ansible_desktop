@@ -1,6 +1,8 @@
+- include_vars: vars_user.yml
+
 - name: Install dependency
   tags: xmrig
-  become: true
+  become_user: "{{main_user}}"
   package:
     name:
       - build-essential 
