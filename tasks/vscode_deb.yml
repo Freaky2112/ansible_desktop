@@ -9,8 +9,9 @@
 
 - name: add public key
   become: true
-  apt_key: url="{{ vscode_url_key }}" 
-  state: present
+  apt_key: 
+    url: "{{ vscode_url_key }}" 
+    state: present
 
 # Update Repo
 
