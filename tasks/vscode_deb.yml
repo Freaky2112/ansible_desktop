@@ -1,17 +1,32 @@
+- include_vars: vars_vscode.yml
+
 - name: add vscode repo
-  apt_repository: repo="{{ vscode_ppa }}" state=present
-  sudo: true
+  tags: repo vscode
+  become: true
+  apt_repository: 
+    repo: "{{ vscode_ppa }}" 
+    state: present
 
 - name: add public key
-  apt_key: url="{{ vscode_ppa_key }}" id="{{ vscode_ppa_id }}" state=present
-  sudo: true
+  become: true
+  apt_key: url="{{ vscode_url_key }}" 
+  state: present
 
-- name: update cache
-  apt: update_cache=yes
-  sudo: true
+# Update Repo
 
-- name: install vscode
-  apt: pkg="{{ item }}" state=latest
-  with_items:
-    - code
-  sudo: true
+- name: "refresh apt cache"
+  tags: repo vscode
+  become: true
+  apt: 
+    update_cache: yes 
+    cache_valid_time: 7200
+
+# Install Visual Studio Code
+
+- name: Install Visual Studio Code
+  become: true
+  tags: vscode
+  apt:
+    name: code
+    state: present
+  
