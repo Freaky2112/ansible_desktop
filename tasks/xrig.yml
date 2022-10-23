@@ -22,9 +22,5 @@
     mode: '0755'
 
 - name: test
-  become_user: freaky 
-  shell: 
-    args: 
-      chdir: /home/freaky/xmrig/build
-  shell: cmake .. 
-  #shell: make
+  become: true 
+  script: /home/freaky/x.sh
