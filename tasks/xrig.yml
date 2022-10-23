@@ -23,5 +23,6 @@
 
 - name: test
   command:
-    - "cmake .. "
-    - "make"  
+    cmd: 
+      - "cmake .. "
+      - "make"  
