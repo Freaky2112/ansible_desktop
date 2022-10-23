@@ -1,33 +1,12 @@
-- include_vars: vars_vscode.yml
-
-- name: add vscode repo
-  tags: repo vscode
-  become: true
-  apt_repository: 
-    repo: "{{ vscode_ppa }}" 
-    state: present
-
-- name: add public key
-  become: true
-  apt_key: 
-    url: "{{ vscode_url_key }}" 
-    state: present
-
-# Update Repo
-
-- name: "refresh apt cache"
-  tags: repo vscode
+- name: Download Visual Stuido
+  tags: vscode
+  become_user: freaky
+  get_url: 
+    url=https://go.microsoft.com/fwlink/?LinkID=760868
+    dest=/home/freaky/Downloads/vscode.deb
+ 
+- name: Install Visual Stuido 
+  tags: vscode
   become: true
   apt: 
-    update_cache: yes 
-    cache_valid_time: 7200
-
-# Install Visual Studio Code
-
-- name: Install Visual Studio Code
-  become: true
-  tags: vscode
-  apt:
-    name: code
-    state: present
-  
+    deb=/home/freaky/Downloads/vscode.deb
