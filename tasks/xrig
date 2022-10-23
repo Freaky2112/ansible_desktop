@@ -2,10 +2,10 @@
   tags: xmrig monero
   become: true
   package:
-    name: 
+    name:
       - build-essential
-      - cmake
+      - cmake 
       - libuv1-dev
-      - libss1-dev
+      - libssl-dev
       - libhwloc-dev
     state: latest
