@@ -10,10 +10,9 @@
       - libuv1-dev 
       - libssl-dev 
       - libhwloc-dev
-  state: latest
+    state: latest
 
 - name: git clone xmrig
-  become_user: "{{main_user}}"
   git:
     repo: 'https://github.com/xmrig/xmrig.git'
      dest: /home/freaky/xmrig
