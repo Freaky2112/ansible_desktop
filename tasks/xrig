@@ -1,5 +1,3 @@
-- include_vars: vars_user.yml
-
 - name: install xmrig 
   tags: xmrig monero
   become: true
