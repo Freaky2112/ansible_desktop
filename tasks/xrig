@@ -1,0 +1,13 @@
+- include_vars: vars_user.yml
+
+- name: install xmrig 
+  tags: xmrig monero
+  become: true
+  package:
+    name: 
+      - build-essential
+      - cmake
+      - libuv1-dev
+      - libss1-dev
+      - libhwloc-dev
+    state: latest
