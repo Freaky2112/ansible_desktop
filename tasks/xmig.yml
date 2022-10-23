@@ -12,10 +12,11 @@
       - libhwloc-dev
     state: latest
 
-#- name: git clone xmrig
-#  become_user: "{{main_user}}"
-#  git:
-#    repo: 'https://github.com/xmrig/xmrig.git'
+- name: git clone xmrig
+  become_user: "{{main_user}}"
+  git:
+    repo: 'https://github.com/xmrig/xmrig.git'
+     dest: /home/freaky/xmrig
 #    clone: yes
 
 #- name: install xmrig
