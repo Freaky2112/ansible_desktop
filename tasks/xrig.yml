@@ -21,8 +21,7 @@
     state: directory
     mode: '0755'
 
-#- name: create build and make
-#  command:
-#    cmd:
-#      - cmake .. 
-#      - make
+- name: create build and make
+  command:
+    - cmake .. 
+    - make
