@@ -23,7 +23,7 @@
 - name: create build and make
   command:
     args:
-      -create: /home/freaky/xmrig/build
+      - create: /home/freaky/xmrig/build
       - chdir: /home/freaky/xmrig/build
       - cmake .. 
       - make
