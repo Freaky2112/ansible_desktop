@@ -27,4 +27,4 @@
     args: 
       chdir: /home/freaky/xmrig/build
   shell: cmake .. 
-  shell: make
+  #shell: make
