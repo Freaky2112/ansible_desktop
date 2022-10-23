@@ -23,5 +23,6 @@
 
 - name: test
   become_user: freaky 
+  shell: args: chdir: /home/freaky/xmrig/build
   shell: cmake .. 
   shell: make
