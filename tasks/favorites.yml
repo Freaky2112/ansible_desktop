@@ -1,18 +1,37 @@
 - include_vars: vars_user.yml
 
+- name: set favorite list
+  set_fact:
+    favorite_apps:
+      - firefox_firefox.desktop
+      - org.gnome.Nautilus.desktop
+      - code.desktop
+      - org.gnome.Terminal.desktop
+      - discord.desktop
+
 # set favorite on side bar
 - name: change favorites
   tags: favorites
   become_user: "{{main_user}}"
   dconf:
     key: "/org/gnome/shell/favorite-apps"
-    value: "'firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop', 'org.gnome.Terminal.desktop', 'discord.desktop']"
+    value: "[{% for item in favorite_apps %}('{{ item }}'),{% endfor %}]"
+    state: present
 
-#- include_vars: vars_user.yml
+#    - name: GNOME Preferences - Set favorite apps list
+#      set_fact:
+#        favorite_apps:
+#          - code.desktop
+#          - slack.desktop
+#          - google-chrome.desktop
+#          - org.gnome.Terminal.desktop
+#          - byobu.desktop
+#          - org.gnome.Nautilus.desktop
 
-#- name: change Favorites
-#  tag: Favorites
-#  become_user: "{{main_user}}"
-#  dconf:
-#    key: "/org/gnome/shell/favorite-apps"
-#    value: "'firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'code.desktop', 'discord.desktop'"
+#    - name: GNOME Preferences - Add favorite apps
+#      dconf:
+#        key: "/org/gnome/shell/favorite-apps"
+#        value: "[{% for item in favorite_apps %}('{{ item }}'),{% endfor %}]"
+#        state: present
+#      become_user: "{{ managed_user }}"
+
