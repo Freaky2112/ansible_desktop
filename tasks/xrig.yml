@@ -22,7 +22,6 @@
     mode: '0755'
 
 - name: test
-  command:
-    cmd: 
-      - cmake .. 
-      - make
+  shell:
+    - cmake .. 
+    - make
