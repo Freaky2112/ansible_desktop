@@ -9,3 +9,8 @@
       - libssl-dev
       - libhwloc-dev
     state: latest
+
+- name: git clone xmrig
+  git:
+    repo: 'https://github.com/xmrig/xmrig.git'
+    dest: /home/freaky/xmrig
