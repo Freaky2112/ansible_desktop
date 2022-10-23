@@ -25,6 +25,6 @@
     args:
       - creates: /home/freaky/xmrig/build
       - chdir: /home/freaky/xmrig/build
-    cmd:
-      - cmake .. 
-      - make
+#    cmd:
+#      - cmake .. 
+#      - make
