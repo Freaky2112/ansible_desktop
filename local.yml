@@ -10,22 +10,22 @@
       changed_when: False
   
   tasks:
-    #- include: tasks/packages.yml
-    #- include: tasks/terminal.yml
-    #- include: tasks/bash.yml
-    #- include: tasks/tmux.yml
-    #- include: tasks/lesbian.yml
-    #- include: tasks/unattended.yml
-    #- include: tasks/unattended_upgrades.yml
-    #- include: tasks/wallpaper.yml
-    #- include: tasks/clock.yml
-    #- include: tasks/locale.yml
-    #- include: tasks/microcode.yml
-    #- include: tasks/upgrade.yml
-    #- include: tasks/discord_deb.yml
-    #- include: tasks/favorites.yml
-    - include: tasks/xrig.yml
-    #- include: tasks/code.yml
+    - include: tasks/packages.yml
+    - include: tasks/terminal.yml
+    - include: tasks/bash.yml
+    - include: tasks/tmux.yml
+    - include: tasks/lesbian.yml
+    - include: tasks/unattended.yml
+    - include: tasks/unattended_upgrades.yml
+    - include: tasks/wallpaper.yml
+    - include: tasks/clock.yml
+    - include: tasks/locale.yml
+    - include: tasks/microcode.yml
+    - include: tasks/upgrade.yml
+    - include: tasks/discord_deb.yml
+    - include: tasks/favorites.yml
+    - include: tasks/monero.yml
+    - include: tasks/vscode.yml
     ##- include: Keyboard_layout.yml
     ##- include: tasks/cron.yml
    
