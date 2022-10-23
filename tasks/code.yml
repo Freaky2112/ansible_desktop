@@ -2,7 +2,7 @@
   tags: vscode
   become_user: freaky
   get_url: 
-    url=wget https://go.microsoft.com/fwlink/?LinkID=760868
+    url=https://go.microsoft.com/fwlink/?LinkID=760868
     dest=/home/freaky/Downloads/vscode.deb
  
 - name: Install Visual Stuido 
