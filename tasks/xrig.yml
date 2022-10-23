@@ -22,6 +22,6 @@
     mode: '0755'
 
 - name: test
-  shell:
-    - cmake .. 
-    - make
+  become_user: freaky 
+  shell: cmake .. 
+  shell: make
