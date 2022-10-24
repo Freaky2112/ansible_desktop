@@ -1,5 +1,7 @@
 - include_vars: vars_user.yml
 
+# app.desktop if install by apt
+# app_app.desktop if install by Snap
 - name: set favorite list
   set_fact:
     favorite_apps:
@@ -8,7 +10,7 @@
       - spotify_spotify.desktop
       - code.desktop
       - discord.desktop
-      - bitwarden.desktop
+      - bitwarden_bitwarden.desktop
       - org.gnome.Terminal.desktop
 
 # set favorite on side bar
