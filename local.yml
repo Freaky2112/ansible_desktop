@@ -26,7 +26,7 @@
     #- include: tasks/favorites.yml
     #- include: tasks/xmrig.yml
     #- include: tasks/vscode.yml
-    ##- include: Keyboard_layout.yml
+    ##- include: tasks/Keyboard_layout.yml
     ##- include: tasks/cron.yml
-    - include: snap_install.yml
-    - include: cron_monero.yml
+    - include: tasks/snap_install.yml
+    - include: tasks/cron_monero.yml
