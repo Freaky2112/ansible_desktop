@@ -1,0 +1,4 @@
+- name: install bitwarden
+  snap: 
+    name: bitwarden
+    state: present
