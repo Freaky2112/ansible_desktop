@@ -1,5 +1,15 @@
 - name: install bitwarden
   become: true
   snap: 
-    name: bitwarden
+    name: 
+      - bitwarden
+      - vlc
+      - spotify
     state: present
+
+## remove Snap Package
+#- name: remove snap
+#  become: true
+#  snap:
+#    name: Package
+#    state: absent
