@@ -9,6 +9,7 @@
       - discord.desktop
       - bitwarden.desktop
       - org.gnome.Terminal.desktop
+      - spotify.desktop
 
 # set favorite on side bar
 - name: change favorites
