@@ -1,4 +1,5 @@
 - name: install bitwarden
+  become: true
   snap: 
     name: bitwarden
     state: present
