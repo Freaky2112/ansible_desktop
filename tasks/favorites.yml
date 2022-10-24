@@ -7,6 +7,7 @@
       - org.gnome.Nautilus.desktop
       - code.desktop
       - discord.desktop
+      - bitwarden.desktop
       - org.gnome.Terminal.desktop
 
 # set favorite on side bar
