@@ -5,6 +5,7 @@
       - bitwarden
       - vlc
       - spotify
+      - libreoffice
     state: present
 
 ## remove Snap Package
