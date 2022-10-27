@@ -35,10 +35,10 @@
     key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-transparency-backgroud"
     value: "true"
 
-# set Theme color
-- name: set terminal theme color to False
-  become__user: "{main_user}"
+
+# set theme colors to false
+- name: set terminal theme colors to "faslse"
+  become_user: "{{main_user}}"
   dconf:
-    key: "/org/gnome/ternimal/legacy/profikes:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors"
-    value: "False"
-    
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors"
+    value: "false"
