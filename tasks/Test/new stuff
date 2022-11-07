@@ -17,3 +17,9 @@ fi
 Script in /usr/bin ## for all user 
 or /$HOME/.bin ## for you only...
 
+## send email with bash
+install sendEmail libio-socket-ssl-perl libnet-ssleay-perl
+
+sendEmail -f "from" -t "to" -u "subjet" -m "messagebody" -s "stmp" -xu "user" -xp "pass"
+
+
