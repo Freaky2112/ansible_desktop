@@ -1,0 +1,19 @@
+## check if bin foler exsit
+if [-d $HOME/.bin] 
+## add folder to var PATH
+then PATH=$PATH:$HOME/.bin
+## if folder not there
+else mkdir $HOME/.bin .... PATH=$PATH:$HOME/.bin
+fi
+
+## check if file exsit
+if [-f $HOME/.bin/filename]
+## do nothing
+then
+## add file to folder
+else copy file to $HOME/.bin
+fi
+
+Script in /usr/bin ## for all user 
+or /$HOME/.bin ## for you only...
+
