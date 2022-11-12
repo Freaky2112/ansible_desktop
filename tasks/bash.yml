@@ -16,6 +16,15 @@
     owner: freaky
     group: freaky
 
+# create directory
+- name: create scripts directory
+  tags: scripts
+  file:
+    path: /home/freaky/.local/bin
+    state: directory
+    owner: "{{ main_user }}"
+    group: "{{ main_user }}"
+
 # copy new copy of bash aliases
 - name: copy bash aliases file
   become_user: freaky
@@ -24,3 +33,13 @@
     dest: /home/freaky/.bash_aliases
     owner: freaky
     group: freaky
+
+# copy scripts files
+- name: copy scripts files
+  become_user: "{{ main_user }}"
+  copy:
+    src: files/upgrade.sh
+    dest: /home/freaky/.local/bin/upgrade.sh
+    owner: freaky
+    group: freaky
+    mode: a+x
