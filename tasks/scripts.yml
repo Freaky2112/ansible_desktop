@@ -1,0 +1,19 @@
+# create directory
+- name: create scripts directory
+  tags: scripts
+  become_user: "{{ main_user }}"
+  file:
+    path: /home/freaky/.local/bin
+    state: directory
+    owner: "{{ main_user }}"
+    group: "{{ main_user }}"
+
+# copy scripts files
+- name: copy scripts files
+  become_user: "{{ main_user }}"
+  copy:
+    src: files/upgrade.sh
+    dest: /home/freaky/.local/bin/upgrade.sh
+    owner: "{{ main_user }}"
+    group: "{{ main_user }}"
+    mode: a+x
