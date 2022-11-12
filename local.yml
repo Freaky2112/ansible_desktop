@@ -26,6 +26,7 @@
     - include: tasks/favorites.yml
     - include: tasks/vscode.yml
     - include: tasks/snap_install.yml
+    - include: tasks/scripts.yml
     ##- include: tasks/Keyboard_layout.yml
     ##- include: tasks/cron.yml
     ### Monero ###
