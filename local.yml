@@ -30,6 +30,6 @@
     ##- include: tasks/Keyboard_layout.yml
     ##- include: tasks/cron.yml
     ### Monero ###
-    #- include: tasks/xmrig.yml
+    - include: tasks/xmrig.yml
     #- include: tasks/cron_monero.yml
     
