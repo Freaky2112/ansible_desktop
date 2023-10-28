@@ -18,5 +18,10 @@
     alias wt="curl wttr.in"
     # Speed Test
     alias speed="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
+<<<<<<< HEAD
     # clean Trash
     alias clean="rm -rf $HOME/.local/share/Trash/files/* && rm -rf $HOME/.local/share/info/*"
+=======
+
+    #more to come
+>>>>>>> a68767159f82c5f93fe66074a1fc43f99257bea4
